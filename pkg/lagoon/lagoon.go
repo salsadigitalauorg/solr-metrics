@@ -89,7 +89,7 @@ func FactsToInsightsRemote(facts []Fact, serviceEndpoint string, bearerToken str
 		return err
 	}
 
-	req, _ := http.NewRequest(http.MethodPost, serviceEndpoint, bytes.NewBuffer(bodyString))
+	req, _ := http.NewRequest(http.MethodPost, serviceEndpoint+"/facts", bytes.NewBuffer(bodyString))
 	req.Header.Set("Authorization", bearerToken)
 	req.Header.Set("Content-Type", "application/json")
 	client := &http.Client{}
