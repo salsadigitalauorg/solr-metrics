@@ -1,4 +1,4 @@
-module lagoon-solr-metrics
+module github.com/salsadigitalauorg/lagoon-solr-metrics
 
 go 1.19
 

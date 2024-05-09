@@ -7,7 +7,7 @@ import (
 	"os"
 	"time"
 
-	"lagoon-solr-metrics/pkg/lagoon"
+	"github.com/salsadigitalauorg/lagoon-solr-metrics/pkg/lagoon"
 
 	log "github.com/sirupsen/logrus"
 )

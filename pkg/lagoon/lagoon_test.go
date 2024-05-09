@@ -7,8 +7,8 @@ import (
 	"os"
 	"testing"
 
-	"lagoon-solr-metrics/pkg/internal"
-	"lagoon-solr-metrics/pkg/lagoon"
+	"github.com/salsadigitalauorg/lagoon-solr-metrics/pkg/internal"
+	"github.com/salsadigitalauorg/lagoon-solr-metrics/pkg/lagoon"
 
 	"github.com/sirupsen/logrus"
 	"github.com/stretchr/testify/assert"
