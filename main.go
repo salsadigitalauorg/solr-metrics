@@ -39,7 +39,7 @@ type Metrics struct {
 type Info struct {
 	Name      string `json:"name"`
 	StartTime string `json:"startTime"`
-	NumDocs   int    `json:"numDocs"`
+	NumDocs   int    `json:"numDocs,string"`
 	IndexSize string `json:"indexSize"`
 	Version   string `json:"version"`
 }
