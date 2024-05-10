@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
+	"io"
 	"net/http"
 	"os"
 	"strings"
@@ -100,7 +101,11 @@ func FactsToInsightsRemote(facts []Fact, serviceEndpoint string, bearerToken str
 	}
 
 	if response.StatusCode != 200 {
-		return fmt.Errorf("there was an error sending the facts to '%s' : %s", serviceEndpoint, response.Body)
+		bytes, err := io.ReadAll(response.Body)
+		if err != nil {
+			log.Fatal(err)
+		}
+		return fmt.Errorf("there was an error sending the facts to '%s' : %s", serviceEndpoint, string(bytes))
 	}
 	return nil
 }

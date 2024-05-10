@@ -129,7 +129,7 @@ func parseEnvVars() {
 
 	insightsEndpointEnv := os.Getenv("LAGOON_INSIGHTS_ENDPOINT")
 	insightsEndpoint = "http://lagoon-remote-insights-remote.lagoon.svc" // default.
-	if insightsEndpointEnv == "" {
+	if insightsEndpointEnv != "" {
 		insightsEndpoint = insightsEndpointEnv
 	}
 }
