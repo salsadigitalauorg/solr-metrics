@@ -28,11 +28,11 @@ type Solr struct {
 
 // Struct that only holds selected metrics.
 type Metrics struct {
+	Version   string `json:"CONTAINER.version.specification,omitempty"`
 	Name      string `json:"CORE.coreName,omitempty"`
 	StartTime string `json:"CORE.startTime,omitempty"`
 	NumDocs   int    `json:"SEARCHER.searcher.numDocs,omitempty"`
 	IndexSize string `json:"INDEX.size,omitempty"`
-	Version   string `json:"CONTAINER.version.specification,omitempty"`
 }
 
 // A copy of Metrics struct but with flattened json keys.
