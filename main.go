@@ -37,11 +37,11 @@ type Metrics struct {
 
 // A copy of Metrics struct but with flattened json keys.
 type Info struct {
-	Name      string `json:"name"`
-	StartTime string `json:"startTime"`
-	NumDocs   int    `json:"numDocs,string"`
-	IndexSize string `json:"indexSize"`
-	Version   string `json:"version"`
+	Version   string `json:"Version"`
+	Name      string `json:"Core name"`
+	StartTime string `json:"Start time"`
+	NumDocs   int    `json:"Documents,string"`
+	IndexSize string `json:"Index size"`
 }
 
 func main() {
