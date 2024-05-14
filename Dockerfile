@@ -19,3 +19,5 @@ RUN GOOS=${TARGETOS} GOARCH=${TARGETARCH} && \
 FROM scratch
 
 COPY --from=builder /go/src/github.com/salsadigitalauorg/lagoon-solr-metrics/build/lagoon-solr-metrics /usr/local/bin/lagoon-solr-metrics
+
+ENTRYPOINT ["/usr/local/bin/lagoon-solr-metrics"]
