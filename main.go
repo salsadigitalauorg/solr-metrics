@@ -2,7 +2,6 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
 	"net/http"
 	"os"
 	"time"
@@ -49,7 +48,7 @@ func main() {
 	parseEnvVars()
 
 	// Request data from Solr.
-	resp, err := httpClient.Get(fmt.Sprintf("http://%s:%s/solr/admin/metrics", solrHost, solrPort))
+	resp, err := httpClient.Get("http://solr:8983/solr/admin/metrics")
 	if err != nil {
 		log.Fatal(err)
 	}
