@@ -48,7 +48,7 @@ func main() {
 	parseEnvVars()
 
 	// Request data from Solr.
-	resp, err := httpClient.Get("http://solr:8983/solr/admin/metrics")
+	resp, err := httpClient.Get("http://" + solrHost + ":" + solrPort + "/solr/admin/metrics")
 	if err != nil {
 		log.Fatal(err)
 	}
