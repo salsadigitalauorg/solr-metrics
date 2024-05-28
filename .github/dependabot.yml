@@ -1,0 +1,15 @@
+version: 2
+updates:
+  - package-ecosystem: "go"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    ignore: []
+    commit-message:
+      prefix: "chore(deps)"
+      include: scope
+    reviewers:
+      - salsadigitalauorg/devops
+    labels:
+      - "dependencies"
